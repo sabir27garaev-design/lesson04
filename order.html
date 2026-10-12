@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <title>Оформление доставки</title>
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/base_adaptive.css" />
+
+    <link rel="stylesheet" href="styles/order.css" />
+    <link rel="stylesheet" href="styles/order_adaptive.css" />
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <header class="header">
+        <a class="header-brand" href="./index.html">
+            <div class="header-logo">D</div>
+            <div class="header-title">Dostaffkin</div>
+        </a>
+        <nav class="header-menu">
+            <a class="header-link" href="#">Оформить <span>доставку</span></a>
+            <a class="header-link" href="./track.html">Отследить <span>посылку</span></a>
+        </nav>
+    </header>
+
+    <aside class="main" id="sidebar">
+        <div class="main-header">
+            <div class="main-title">Оформление доставки</div>
+            <div class="main-text">Выберите параметры для расчета отправления</div>
+        </div>
+        <div class="main-content">
+            <div class="main-route">
+                <div class="main-block-title">Маршрут</div>
+                <div class="main-fields">
+                    <div class="main-field" id="fromField">
+                        <div class="main-pin"></div>
+                        <input id="from" placeholder="Откуда: начните вводить адрес" autocomplete="off" />
+                        <div class="main-ac" id="fromAc" role="listbox" aria-label="Подсказки адресов"></div>
+                    </div>
+
+                    <div class="main-field" id="toField">
+                        <div class="main-pin"></div>
+                        <input id="to" placeholder="Куда: начните вводить адрес" autocomplete="off" />
+                        <div class="main-ac" id="toAc" role="listbox" aria-label="Подсказки адресов"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-package">
+                <div class="main-block-title">Размер посылки</div>
+
+                <div class="main-sizes">
+                    <div class="main-size-card is-active" data-value="xs">
+                        <div class="main-size-top">
+                            <div class="main-size-label">XS</div>
+                            <div class="main-size-rate">9 ₽/км</div>
+                        </div>
+                        <div class="main-size-media">
+                            <img src="images/sizes/xs.png" alt="Короб XS" />
+                        </div>
+                        <div class="main-size-description">17×12×9 см,<br>до 0.5 кг</div>
+                    </div>
+
+                    <div class="main-size-card" data-value="s">
+                        <div class="main-size-top">
+                            <div class="main-size-label">S</div>
+                            <div class="main-size-rate">13 ₽/км</div>
+                        </div>
+                        <div class="main-size-media">
+                            <img src="images/sizes/s.png" alt="Короб S" />
+                        </div>
+                        <div class="main-size-description">23×19×10 см,<br>до 2 кг</div>
+                    </div>
+
+                    <div class="main-size-card" data-value="m">
+                        <div class="main-size-top">
+                            <div class="main-size-label">M</div>
+                            <div class="main-size-rate">20 ₽/км</div>
+                        </div>
+                        <div class="main-size-media">
+                            <img src="images/sizes/m.png" alt="Короб M" />
+                        </div>
+                        <div class="main-size-description">33×25×15 см,<br>до 5 кг</div>
+                    </div>
+
+                    <div class="main-size-card" data-value="l">
+                        <div class="main-size-top">
+                            <div class="main-size-label">L</div>
+                            <div class="main-size-rate">27 ₽/км</div>
+                        </div>
+                        <div class="main-size-media">
+                            <img src="images/sizes/l.png" alt="Короб L" />
+                        </div>
+                        <div class="main-size-description">31×25×38 см,<br>до 12 кг</div>
+                    </div>
+
+                    <div class="main-size-card" data-value="xl">
+                        <div class="main-size-top">
+                            <div class="main-size-label">XL</div>
+                            <div class="main-size-rate">35 ₽/км</div>
+                        </div>
+                        <div class="main-size-media">
+                            <img src="images/sizes/xl.png" alt="Короб XL" />
+                        </div>
+                        <div class="main-size-description">60×35×30 см,<br>до 18 кг</div>
+                    </div>
+
+                    <div class="main-size-card" data-value="max">
+                        <div class="main-size-top">
+                            <div class="main-size-label">MAX</div>
+                            <div class="main-size-rate">70 ₽/км</div>
+                        </div>
+                        <div class="main-size-media main-size-media-palleta">
+                            <img src="images/sizes/max.png" alt="Паллета" />
+                        </div>
+                        <div class="main-size-description">120×120×80 см,<br>до 200 кг</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-speed">
+                <div class="main-block-title">Скорость доставки</div>
+
+                <div class="main-speeds">
+                    <div class="main-speed-card is-active" data-value="regular">
+                        <img class="main-speed-media" src="images/icons/regular.svg" alt="Regular" />
+                        <div class="main-speed-description">Обычная</div>
+                    </div>
+                    <div class="main-speed-card" data-value="fast">
+                        <img class="main-speed-media" src="images/icons/fast.svg" alt="Fast" />
+                        <div class="main-speed-description">Приоритетная</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main-calculate-block">
+                <button id="calc" class="button calculate-button" type="button" disabled>Рассчитать</button>
+            </div>
+            <div class="main-result" id="result">
+                <div class="main-result-title">Расчеты вашего заказа</div>
+                <div class="main-result-lines">
+                    <div class="main-result-line"><span>Расстояние</span><span id="distanceValue">—</span></div>
+                    <div class="main-result-line"><span>Доставим через</span><span id="durationValue">—</span></div>
+                    <div class="main-result-line"><span>Тариф</span><span id="rateValue">—</span></div>
+                </div>
+                <div class="main-price">
+                    <div class="main-price-label">Итого</div>
+                    <div class="main-price-value" id="totalValue">—</div>
+                </div>
+            </div>
+            <div class="main-order-box">
+                <div class="main-order-form" id="orderForm">
+                    <div class="main-order-title">Оформление доставки</div>
+                    <div class="main-block-info-row">
+                        <div class="main-block-title">Контакты</div>
+                        <div class="order-fields">
+                            <div class="main-field">
+                                <input id="customerName" placeholder="Ваше имя" autocomplete="off" />
+                            </div>
+                            <div class="main-field">
+                                <input id="customerPhone" placeholder="Ваш телефон" autocomplete="off"
+                                    inputmode="tel" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-block-info-row extra-info">
+                        <div class="main-block-title">Дополнительная информация</div>
+                        <div class="main-field textarea">
+                            <textarea id="comment" placeholder="Детали доставки и комментарии"></textarea>
+                        </div>
+                    </div>
+                    <button id="submit" class="button main-submit-request" type="button" disabled>Отправить
+                        заявку
+                    </button>
+                </div>
+
+                <div class="main-order-success" id="orderSuccess">
+                    <div class="main-success-icon">✓</div>
+                    <div class="main-success-title">Заявка отправлена!</div>
+                    <div class="main-success-title">Номер отправления – <span id="orderId"></span></div>
+                    <div class="main-success-subtitle">Мы скоро свяжемся с вами</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://testologia.ru/ymc_min.js" data-apikey="d52a6a86-2d6f-426b-8276-a57ac415ea25"
+            data-suggest-apikey="5a24ba8d-c959-4f5f-bfac-85647c020700"></script>
+
+    </aside>
+
+    <script src="scripts/order.js"></script>
+</body>
+
+</html>

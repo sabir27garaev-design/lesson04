@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <title>Отследить посылку</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/base_adaptive.css" />
+
+    <link rel="stylesheet" href="styles/track.css" />
+    <link rel="stylesheet" href="styles/track_adaptive.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <a class="header-brand" href="./index.html">
+                <div class="header-logo">D</div>
+                <div class="header-title">Dostaffkin</div>
+            </a>
+            <nav class="header-menu">
+                <a class="header-link" href="./order.html">Оформить <span>доставку</span></a>
+                <a class="header-link" href="#">Отследить <span>посылку</span></a>
+            </nav>
+        </header>
+        <main class="track-content">
+            <section class="track-card track-search">
+                <div class="track-title">Отследить посылку</div>
+                <div class="track-action">
+                    <div class="main-field track-field">
+                        <input id="trackNumber" placeholder="Введите номер посылки" autocomplete="off" />
+                    </div>
+                    <button id="trackButton" class="button track-button" type="button">Отследить</button>
+                </div>
+            </section>
+            <section class="track-card track-result" id="trackResult">
+                <div class="track-result-header">
+                    <div class="track-id" id="trackIdValue"></div>
+                    <div class="track-routes">
+                        <div class="track-route">
+                            <div class="track-route-pin">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="orange" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                </svg>
+                            </div>
+                            <div class="track-route-address" id="trackFromValue">
+                                Откуда: Москва, улица Арбат, 1
+                            </div>
+                        </div>
+                        <div class="track-route track-route-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                            </svg>
+                        </div>
+                        <div class="track-route">
+                            <div class="track-route-pin">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="green" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                </svg>
+                            </div>
+                            <div class="track-route-address" id="trackToValue">
+                                Куда: Минск, проспект Независимости, 58
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="track-info">
+                    <div class="track-status-title">Статус данной посылки:</div>
+                    <div class="track-status-list" id="trackStatusList">
+
+
+                        <div class="track-status created">
+                            <img src="images/icons/created.svg" class="track-status-icon" alt="Created">
+                            <div class="track-status-text">
+                                <div class="track-status-text-state">Создан</div>
+                                <div class="track-status-text-date">10.01.2026</div>
+                            </div>
+                        </div>
+
+                        <div class="track-status in-way">
+                            <img src="images/icons/in-way.svg" class="track-status-icon" alt="In way">
+                            <div class="track-status-text">
+                                <div class="track-status-text-state">В пути: Москва</div>
+                                <div class="track-status-text-date">18.01.2026</div>
+                            </div>
+                        </div>
+
+                        <div class="track-status ready">
+                            <img src="images/icons/ready.svg" class="track-status-icon" alt="Ready">
+                            <div class="track-status-text">
+                                <div class="track-status-text-state">Готов к выдаче</div>
+                                <div class="track-status-text-date">25.01.2026</div>
+                            </div>
+                        </div>
+
+                        <div class="track-status done">
+                            <img src="images/icons/done.svg" class="track-status-icon" alt="Done">
+                            <div class="track-status-text">
+                                <div class="track-status-text-state">Вручен</div>
+                                <div class="track-status-text-date">27.01.2026</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>

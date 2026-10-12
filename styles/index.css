@@ -1,0 +1,97 @@
+.container {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.main {
+    padding: 111px 40px 40px;
+    position: relative;
+    display: flex;
+}
+
+.main-info {
+    max-width: 840px;
+    width: 100%;
+    position: relative;
+}
+
+.main-title {
+    margin-top: 98px;
+    font-weight: 500;
+    font-size: 200px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #111111;
+    left: -15px;
+    position: relative;
+}
+
+.main-title span {
+    color: #ffcc00;
+}
+
+.main-features {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main-feature {
+    background: #111111;
+    color: #ffffff;
+    padding: 12px 14px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    border-radius: 10px;
+}
+
+.main-description {
+    margin-top: 50px;
+    max-width: 500px;
+    font-size: 20px;
+    line-height: 1.1;
+    color: #111111;
+}
+
+.main-actions {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-actions .button {
+    height: 80px;
+    width: 433px;
+    font-size: 18px;
+    font-weight: bold;
+    place-items: center;
+    display: grid;
+}
+
+.main-title-ghost {
+    position: absolute;
+    z-index: -1;
+    left: -70px;
+    bottom: -150px;
+    font-weight: 500;
+    font-size: 278px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #ECEDF04D;
+}
+
+.main-image {
+    width: 1024px;
+    top: 100px;
+    z-index: -2;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    display: block;
+}

@@ -1,0 +1,32 @@
+@media (max-width: 767px) {
+    .header {
+        left: 10px;
+        right: 10px;
+        top: 10px;
+    }
+
+    .header-link span {
+        display: none;
+    }
+
+    .header-menu {
+        gap: 20px;
+        justify-content: flex-start;
+        margin: 0 0 0 30px;
+        position: static;
+        transform: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .header-title {
+        display: none;
+    }
+}
+
+@media (max-width: 374px) {
+    .header-menu {
+        gap: 10px;
+        margin: 0 0 0 10px;
+    }
+}
